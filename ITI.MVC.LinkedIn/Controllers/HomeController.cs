@@ -10,6 +10,7 @@ namespace ITI.MVC.LinkedIn.Controllers
     {
         public ActionResult Index()
         {
+            int x = 6;
             return View();
         }
 
