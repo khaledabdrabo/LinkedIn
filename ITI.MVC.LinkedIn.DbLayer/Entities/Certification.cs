@@ -11,7 +11,7 @@ namespace ITI.MVC.LinkedIn.DbLayer.Entities
     [Table("Certification")]
    public class Certification
     {
-
+        [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
