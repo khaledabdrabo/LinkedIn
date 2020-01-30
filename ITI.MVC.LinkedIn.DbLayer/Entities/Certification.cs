@@ -15,5 +15,6 @@ namespace ITI.MVC.LinkedIn.DbLayer.Entities
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        public string Name2 { get; set; }
     }
 }
