@@ -16,10 +16,13 @@ namespace ITI.MVC.LinkedIn.DbLayer.Entities
     public class Organization
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please Enter valid name")]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {1} characters long.", MinimumLength = 50)]
+
         public string Name { get; set; }
         public string Logo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "OrganizationType required")]
+        
         public OrganizationType Type { get; set; }
 
     }

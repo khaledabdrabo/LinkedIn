@@ -12,7 +12,9 @@ namespace ITI.MVC.LinkedIn.DbLayer.Entities
     class Skill
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "please enter Name ")]
+        [StringLength(50, ErrorMessage = "The {0} must be at least 50 characters long.", MinimumLength = 50)]
+
         public string Name { get; set; }
 
     }

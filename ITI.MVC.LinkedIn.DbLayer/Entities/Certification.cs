@@ -13,8 +13,10 @@ namespace ITI.MVC.LinkedIn.DbLayer.Entities
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please Enter valid name")]
+        [StringLength(50, ErrorMessage = "The {0} must be at least 50 characters long.", MinimumLength = 6)]
+
         public string Name { get; set; }
-        public string Name2 { get; set; }
+        
     }
 }
